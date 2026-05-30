@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing · Logic Insight</title>
+  <meta name="description" content="Per-core licensing. No data-volume games. Three transparent tiers." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23C39BFF'/%3E%3Cstop offset='100%25' stop-color='%236D28D9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2307050E'/%3E%3Cpath d='M16 6 C 10 6 6 10 6 16 C 6 22 10 26 16 26' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 10 C 12 10 10 12 10 16 C 10 20 12 22 16 22' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23C39BFF'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="pricing">
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-blob" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="nav">
+    <a href="index.html" class="nav__brand" aria-label="Logic Insight home">
+      <svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
+  <defs>
+    <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C39BFF"/>
+      <stop offset="60%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FAF7FF"/>
+      <stop offset="55%" stop-color="#D7C2FF"/>
+      <stop offset="100%" stop-color="#FF6B9C"/>
+    </linearGradient>
+  </defs>
+  <!-- fingerprint mark -->
+  <g transform="translate(0,2)">
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
+    <path d="M16 5 C 9 5 5 9 5 16 C 5 23 9 27 16 27" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M16 9 C 11 9 9 11 9 16 C 9 21 11 23 16 23" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
+  </g>
+  <!-- wordmark -->
+  <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
+  <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
+</svg>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+    <a href="product.html">Product</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="ai-assistant.html">AI Assistant</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="pricing.html" class="is-active">Pricing</a>
+    <a href="insights.html">Insights</a>
+    <a href="about.html">About</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="kbd-trigger" id="kbd-open" aria-label="Open command palette">
+        <span>Search</span><kbd>⌘</kbd><kbd>K</kbd>
+      </button>
+      <a href="about.html#contact" class="btn btn--ghost">Talk to sales</a>
+      <a href="pricing.html" class="btn btn--primary">
+        <span>Start free trial</span>
+        <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <section class="pagehead">
+    <div class="hero__bg">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__bg-aurora">
+        <span class="aurora aurora--1"></span>
+        <span class="aurora aurora--2"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="eyebrow" data-reveal><span class="dot"></span>Pricing</div>
+      <h1 data-reveal>Three ways to deploy. <span class="italic gradient">All transparent.</span></h1>
+      <p data-reveal>Per-core licensing. No data-volume games. No 'contact us' tier hidden behind the page.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pricing__grid" data-reveal>
+        <article class="price-card">
+          <header><h3>Essentials</h3><p>Single cluster or small platform team starting to consolidate signal.</p></header>
+          <div class="price-card__price"><span class="price-num">$48</span><span class="price-unit">/core / mo</span></div>
+          <ul class="price-card__list">
+            <li>Nutanix cluster + hardware monitoring</li>
+            <li>ML baselines · 90-day retention</li>
+            <li>Datadog or Grafana export</li>
+            <li>Email + chat support</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#">Start 30-day trial</a>
+        </article>
+        <article class="price-card price-card--featured">
+          <span class="price-card__badge">Most teams pick this</span>
+          <header><h3>Enterprise</h3><p>Multi-cluster, multi-site. The full Overwatch surface — IPFIX + AI assistant.</p></header>
+          <div class="price-card__price"><span class="price-num">$36</span><span class="price-unit">/core / mo</span></div>
+          <ul class="price-card__list">
+            <li>Everything in Essentials</li>
+            <li>Predictive analytics + capacity forecasts</li>
+            <li>IPFIX east-west flow analysis</li>
+            <li>HYCU backup posture telemetry</li>
+            <li>AI assistant · evidence-linked answers</li>
+            <li>Wasabi / S3 object-lock destination</li>
+          </ul>
+          <a class="btn btn--primary btn--block" href="#">Deploy Enterprise</a>
+        </article>
+        <article class="price-card">
+          <header><h3>Managed (MaaS)</h3><p>We run the appliance, the upgrades, the tuning. You get the dashboards.</p></header>
+          <div class="price-card__price"><span class="price-num">Talk</span><span class="price-unit">to us</span></div>
+          <ul class="price-card__list">
+            <li>Fully managed Overwatch appliance</li>
+            <li>24×7 SRE coverage from Logic Insight</li>
+            <li>Quarterly capacity + posture reviews</li>
+            <li>Datadog Marketplace bundling option</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="about.html#contact">Talk to a human</a>
+        </article>
+      </div>
+
+      <header class="section-head" data-reveal style="margin-top:120px;">
+        <span class="eyebrow"><span class="dot"></span>FAQ</span>
+        <h2 class="section-title">Common questions before you <span class="italic gradient">commit a per-core spend.</span></h2>
+      </header>
+      <div class="faq" data-reveal>
+        <details><summary>Is pricing really per-core, or per-host?</summary><p>Per physical core in the Nutanix cluster being monitored. Logical cores don't multiply the cost — and Overwatch's appliance is included in the per-core price.</p></details>
+        <details><summary>Do you charge per metric or per data volume?</summary><p>No. The per-core price covers all metrics, all retention up to the tier limit, all integrations. No invoice surprises from ingest growth.</p></details>
+        <details><summary>What's the trial like?</summary><p>30 days, no credit card. You get the full Enterprise tier on as many clusters as you want. Cancel by closing the appliance — nothing leaves your network.</p></details>
+        <details><summary>How does the Managed tier differ?</summary><p>We run the appliance, upgrades, tuning, and the on-call rotation. You get the dashboards and a quarterly posture review. Pricing is bespoke; usually it's cheaper than the SRE headcount you'd otherwise add.</p></details>
+        <details><summary>Datadog Marketplace pricing?</summary><p>If you'd rather buy through Datadog, the Marketplace bundle is available. Same per-core economics, billed through your Datadog contract.</p></details>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__brand" aria-label="Logic Insight home" style="padding:0;"><svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
+  <defs>
+    <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C39BFF"/>
+      <stop offset="60%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FAF7FF"/>
+      <stop offset="55%" stop-color="#D7C2FF"/>
+      <stop offset="100%" stop-color="#FF6B9C"/>
+    </linearGradient>
+  </defs>
+  <!-- fingerprint mark -->
+  <g transform="translate(0,2)">
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
+    <path d="M16 5 C 9 5 5 9 5 16 C 5 23 9 27 16 27" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M16 9 C 11 9 9 11 9 16 C 9 21 11 23 16 23" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
+  </g>
+  <!-- wordmark -->
+  <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
+  <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
+</svg></a>
+          <p class="footer__tagline">Nutanix observability that thinks ahead.</p>
+          <address class="footer__addr">
+            425 W Colonial Dr, Ste 303<br/>
+            Orlando, FL 32804<br/>
+            <a href="mailto:contact@logicinsight.io">contact@logicinsight.io</a><br/>
+            <a href="tel:+14075132359">+1 (407) 513-2359</a>
+          </address>
+        </div>
+        <nav class="footer__cols" aria-label="Footer">
+          <div>
+            <h4>Product</h4>
+            <a href="product.html">Cluster monitoring</a>
+            <a href="product.html#forecast">Predictive analytics</a>
+            <a href="product.html#flow">Network flow</a>
+            <a href="product.html#hycu">Backup posture</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+          </div>
+          <div>
+            <h4>Integrations</h4>
+            <a href="integrations.html#datadog">Datadog Marketplace</a>
+            <a href="integrations.html#grafana">Grafana · Prometheus</a>
+            <a href="integrations.html#hycu">HYCU Protégé</a>
+            <a href="integrations.html#prism">Prism Central</a>
+            <a href="integrations.html#wasabi">Wasabi · S3</a>
+            <a href="integrations.html#snmp">SNMP devices</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="about.html">About</a>
+            <a href="insights.html">Editorial</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html#contact">Contact</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="#">Docs</a>
+            <a href="#">RSS feed</a>
+            <a href="#">GitHub</a>
+            <a href="#">Status</a>
+            <a href="#">Security</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <small>© 2026 Logic Insight, LLC. All rights reserved.</small>
+        <small>Made in Orlando · for infrastructure operators</small>
+      </div>
+    </div>
+  </footer>
+
+  <div class="kbd" id="kbd" hidden>
+    <div class="kbd__scrim" data-kbd-close></div>
+    <div class="kbd__panel" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="kbd__input">
+        <svg viewBox="0 0 16 16" width="16" height="16"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="kbd-search" placeholder="Jump to a page or feature…" autocomplete="off"/>
+        <kbd>esc</kbd>
+      </div>
+      <div class="kbd__list" id="kbd-list"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
