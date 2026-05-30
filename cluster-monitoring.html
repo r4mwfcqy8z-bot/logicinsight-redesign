@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutanix Cluster Monitoring | Logic Insight</title>
+  <meta name="description" content="Prism Central, Prism Element, and AHV Visibility in One View" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23C39BFF'/%3E%3Cstop offset='100%25' stop-color='%236D28D9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2307050E'/%3E%3Cpath d='M16 6 C 10 6 6 10 6 16 C 6 22 10 26 16 26' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 10 C 12 10 10 12 10 16 C 10 20 12 22 16 22' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23C39BFF'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-blob" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="nav">
+    <a href="index.html" class="nav__brand" aria-label="Logic Insight home">
+      <svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
+  <defs>
+    <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C39BFF"/><stop offset="60%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FAF7FF"/><stop offset="55%" stop-color="#D7C2FF"/><stop offset="100%" stop-color="#FF6B9C"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,2)">
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
+    <path d="M16 5 C 9 5 5 9 5 16 C 5 23 9 27 16 27" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M16 9 C 11 9 9 11 9 16 C 9 21 11 23 16 23" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
+  </g>
+  <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
+  <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
+</svg>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+    <a href="features.html">Features</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="ai-assistant.html">AI Assistant</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="kbd-trigger" id="kbd-open" aria-label="Open command palette">
+        <span>Search</span><kbd>⌘</kbd><kbd>K</kbd>
+      </button>
+      <a href="about.html#contact" class="btn btn--ghost">Talk to sales</a>
+      <a href="pricing.html" class="btn btn--primary">
+        <span>Start free trial</span>
+        <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <section class="pagehead">
+    <div class="hero__bg">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__bg-aurora">
+        <span class="aurora aurora--1"></span>
+        <span class="aurora aurora--2"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="eyebrow" data-reveal><span class="dot"></span>Logic Insight</div>
+      <h1 data-reveal>Nutanix Cluster Monitoring</h1>
+    </div>
+  </section>
+<section class="section ll-section"><div class="container"><header class="section-head" data-reveal><p class="section-sub">Prism Central, Prism Element, and AHV Visibility in One View</p></header><div class="prose" data-reveal><p class="lead-snippet">Overwatch gives you full-stack observability across every Nutanix cluster in your environment.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Every Layer of Your Nutanix Stack — Covered</h2><p class="section-sub">Most monitoring tools give you surface-level VM metrics. Overwatch goes deeper — from Prism Central management data down to individual vDisk performance and hardware sensor readings.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Prism Central</h3><p class="lead-snippet">Multi-cluster management, categories, projects, policies, alerts, and cross-cluster health</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Prism Element / Cluster</h3><p class="lead-snippet">Per-cluster compute, storage, and network aggregates, storage pools, containers, and replication</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Hosts &amp; CVMs</h3><p class="lead-snippet">Per-host CPU, memory, network throughput, CVM health, and hypervisor performance</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Virtual Machines</h3><p class="lead-snippet">Per-VM CPU, memory, disk IOPS, network I/O, snapshot size, and protection status</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Physical &amp; Storage</h3><p class="lead-snippet">Volume groups, vDisks, disk hardware, Redfish sensors, and firmware versions</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Prism Central Intelligence</h2><p class="section-sub">Multi-cluster management visibility in one pane</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Cluster Health Overview</h3><p class="lead-snippet">Overwatch connects directly to the Prism Central v3 API to collect management-layer data that gives you a unified view across all registered clusters.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Total: 4 clusters · 335 VMs · 16 hosts</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Host &amp; Compute Metrics</h2><p class="section-sub">HPE DL380 Gen10 Plus · AHV 20230302.207</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Host: PROD-HOST-04</h3><p class="lead-snippet">Deep visibility into every hypervisor and CVM</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Every AHV host and Controller VM in your environment is monitored continuously.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Virtual Machine Analytics</h2><p class="section-sub">Every VM, every metric, every second</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>VM: app-db-primary</h3><p class="lead-snippet">Overwatch monitors every virtual machine in your environment with sub-minute granularity.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">PROD-CLU01 · PROD-HOST-04 · Protected ✓</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Snapshots: 3 (12.4 GB total)</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Oldest: 48 hours</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Backup: Last successful 2 hours ago via HYCU</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">✓ RPO: Compliant</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">CPU ▲ 34% above baseline — investigate</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Storage Deep Dive</h2><p class="section-sub">Total Cluster Storage: 70 TB</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Storage — PROD-CLU01</h3><p class="lead-snippet">Used: 44.9 TB (64%)</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Dedup Savings: 2.3x | Compression: 1.8x</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Effective Savings: 38.2 TB</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">SQL-Data will reach 85% in 34 days</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Archive cold data or expand container allocation</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Containers, volume groups, and vDisks — not just capacity charts</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Nutanix storage is more than a capacity number.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Not Another Generic VM Monitor</h2><p class="section-sub">Overwatch was built for Nutanix — not adapted from a generic tool.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Nutanix-Native API Integration</h3><p class="lead-snippet">We don't scrape SNMP or install agents.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Physical-to-Virtual Correlation</h3><p class="lead-snippet">When a VM is slow, is it the VM, the host, the storage, or the hardware?</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>ML Baselines Per Resource</h3><p class="lead-snippet">Every cluster, host, VM, and storage container gets its own ML-generated baseline.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Pre-Built Dashboards, Not Empty Canvases</h2><p class="section-sub">Start with expert-designed dashboards on day one</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Overwatch — Cluster Overview</h3><p class="lead-snippet">Overwatch doesn't just forward raw metrics and leave you to build dashboards from scratch.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Related articles</h2><p class="section-sub">Use these deeper Nutanix monitoring guides to move from product overview into the signals, operating patterns, and storage behavior that matter most.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Nutanix Performance Metrics That Matter</h3><p class="lead-snippet">Not all Nutanix metrics are equal.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Nutanix Storage Monitoring Deep Dive</h3><p class="lead-snippet">Nutanix storage is a distributed system, not a SAN.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Monitor Nutanix After VMware Migration</h3><p class="lead-snippet">Migrated from VMware to Nutanix?</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><h2 class="section-title">Monitor Your First Cluster in 30 Minutes</h2><p class="section-sub">Import the appliance, connect to Prism, and see your clusters in your dashboards before lunch.</p></header></div></section>  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__brand" aria-label="Logic Insight home" style="padding:0;"><svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
+  <defs>
+    <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C39BFF"/><stop offset="60%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FAF7FF"/><stop offset="55%" stop-color="#D7C2FF"/><stop offset="100%" stop-color="#FF6B9C"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,2)">
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
+    <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
+    <path d="M16 5 C 9 5 5 9 5 16 C 5 23 9 27 16 27" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M16 9 C 11 9 9 11 9 16 C 9 21 11 23 16 23" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
+  </g>
+  <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
+  <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
+</svg></a>
+          <p class="footer__tagline">Nutanix observability that thinks ahead.</p>
+          <address class="footer__addr">
+            425 W Colonial Dr, Ste 303<br/>
+            Orlando, FL 32804<br/>
+            <a href="mailto:contact@logicinsight.io">contact@logicinsight.io</a><br/>
+            <a href="tel:+14075132359">+1 (407) 513-2359</a>
+          </address>
+        </div>
+        <nav class="footer__cols" aria-label="Footer">
+          <div>
+            <h4>Product</h4>
+            <a href="cluster-monitoring.html">Cluster monitoring</a>
+            <a href="predictive-analytics.html">Predictive analytics</a>
+            <a href="network-flow-analysis.html">Network flow</a>
+            <a href="hycu-monitoring.html">HYCU monitoring</a>
+            <a href="redfish-monitoring.html">Redfish / IPMI</a>
+            <a href="snmp-monitoring.html">SNMP</a>
+          </div>
+          <div>
+            <h4>Integrations</h4>
+            <a href="nutanix-datadog.html">Datadog</a>
+            <a href="nutanix-grafana.html">Grafana</a>
+            <a href="how-to-monitor-nutanix-with-datadog.html">How-to · Datadog</a>
+            <a href="how-to-monitor-nutanix-with-grafana.html">How-to · Grafana</a>
+            <a href="nutanix-monitoring-vs-prism.html">vs Prism</a>
+            <a href="integrations.html">All integrations</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="features.html">Features</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="integrations.html">Integrations</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="resources.html">All resources</a>
+            <a href="blog.html">Blog</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <small>© 2026 Logic Insight, LLC. All rights reserved.</small>
+        <small>Made in Orlando · for infrastructure operators</small>
+      </div>
+    </div>
+  </footer>
+
+  <div class="kbd" id="kbd" hidden>
+    <div class="kbd__scrim" data-kbd-close></div>
+    <div class="kbd__panel" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="kbd__input">
+        <svg viewBox="0 0 16 16" width="16" height="16"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="kbd-search" placeholder="Jump to a page or feature…" autocomplete="off"/>
+        <kbd>esc</kbd>
+      </div>
+      <div class="kbd__list" id="kbd-list"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

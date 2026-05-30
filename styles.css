@@ -1111,6 +1111,127 @@ html.js [data-stagger].is-in .word { opacity: 1; transform: translateY(0); filte
 .faq p { margin-top: var(--s-3); color: var(--ink-soft); }
 
 /* ================================================================
+   24-PAGE CONTENT LAYOUT (generic sections)
+   ================================================================ */
+
+.ll-section { padding: var(--s-9) 0; }
+.ll-section + .ll-section { padding-top: 0; }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-4);
+  margin-top: var(--s-7);
+}
+
+.feat-card {
+  position: relative;
+  padding: var(--s-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-4);
+  transition: transform 400ms var(--ease-out-expo), border-color 400ms, box-shadow 400ms;
+}
+.feat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(167,139,250,0.30);
+  box-shadow: var(--glow-violet-soft);
+}
+.feat-card h3 {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-bottom: var(--s-3);
+  color: var(--ink);
+}
+.feat-card p {
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+.feat-card p + p { margin-top: 8px; }
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-3) 0 0;
+  display: grid;
+  gap: 8px;
+}
+.bullet-list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+}
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px;
+  width: 14px; height: 14px;
+  background: linear-gradient(135deg, var(--p-400), var(--pink-400));
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3 8l3.5 3.5L13 4' stroke='black' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / contain no-repeat;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3 8l3.5 3.5L13 4' stroke='black' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / contain no-repeat;
+}
+
+.prose {
+  max-width: 760px;
+  margin: var(--s-5) auto 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+}
+.prose p { margin-bottom: var(--s-4); }
+.section-head--left + .prose { margin-left: 0; }
+
+/* lead-snippet = first sentence rendered from crawl */
+.lead-snippet { color: var(--ink-soft); font-size: var(--fs-base); line-height: 1.65; }
+/* copy-slot = a visible placeholder where the official paragraph belongs */
+.copy-slot {
+  margin-top: 6px; padding: 10px 14px;
+  font-family: var(--ff-mono); font-size: var(--fs-xs);
+  color: var(--ink-mute);
+  background: rgba(167,139,250,0.05);
+  border: 1px dashed rgba(167,139,250,0.20);
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s-4);
+  margin-top: var(--s-5);
+}
+.stat-cell {
+  padding: var(--s-5);
+  background:
+    linear-gradient(180deg, rgba(167,139,250,0.10), rgba(167,139,250,0.02)),
+    var(--surface);
+  border: 1px solid rgba(167,139,250,0.20);
+  border-radius: var(--r-3);
+}
+.stat-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, var(--p-200), var(--pink-400));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  line-height: 1;
+}
+.stat-label {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  margin-top: 8px;
+}
+
+/* ================================================================
    UTILITY
    ================================================================ */
 .flex-between { display: flex; justify-content: space-between; align-items: center; gap: var(--s-4); }

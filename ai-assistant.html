@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Assistant · Logic Insight</title>
-  <meta name="description" content="Evidence-grounded AI for infrastructure operations. Less chat, more evidence." />
+  <title>AI Assistant for Nutanix Monitoring | Overwatch</title>
+  <meta name="description" content="Overwatch includes a built-in AI analyst that connects to live metrics, logs, network flows, alerts, and cluster inventory. Ask a question in natural language a" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23C39BFF'/%3E%3Cstop offset='100%25' stop-color='%236D28D9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2307050E'/%3E%3Cpath d='M16 6 C 10 6 6 10 6 16 C 6 22 10 26 16 26' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 10 C 12 10 10 12 10 16 C 10 20 12 22 16 22' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23C39BFF'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body data-page="ai-assistant">
+<body>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-blob" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
@@ -22,17 +22,12 @@
       <svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
   <defs>
     <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#C39BFF"/>
-      <stop offset="60%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+      <stop offset="0%" stop-color="#C39BFF"/><stop offset="60%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
     <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FAF7FF"/>
-      <stop offset="55%" stop-color="#D7C2FF"/>
-      <stop offset="100%" stop-color="#FF6B9C"/>
+      <stop offset="0%" stop-color="#FAF7FF"/><stop offset="55%" stop-color="#D7C2FF"/><stop offset="100%" stop-color="#FF6B9C"/>
     </linearGradient>
   </defs>
-  <!-- fingerprint mark -->
   <g transform="translate(0,2)">
     <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
     <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
@@ -41,18 +36,17 @@
     <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
     <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
   </g>
-  <!-- wordmark -->
   <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
   <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
 </svg>
     </a>
     <nav class="nav__links" aria-label="Primary">
-    <a href="product.html">Product</a>
+    <a href="features.html">Features</a>
     <a href="architecture.html">Architecture</a>
     <a href="ai-assistant.html" class="is-active">AI Assistant</a>
     <a href="integrations.html">Integrations</a>
     <a href="pricing.html">Pricing</a>
-    <a href="insights.html">Insights</a>
+    <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
     </nav>
     <div class="nav__cta">
@@ -76,57 +70,23 @@
       </div>
     </div>
     <div class="container">
-      <div class="eyebrow" data-reveal><span class="dot"></span>AI Assistant</div>
-      <h1 data-reveal>Less chat. <span class="italic gradient">More evidence.</span></h1>
-      <p data-reveal>Most AI in observability is a chat box over the same broken signals. Overwatch grounds every answer in the data path it pulled from — and shows you that path.</p>
+      <div class="eyebrow" data-reveal><span class="dot"></span>Logic Insight</div>
+      <h1 data-reveal>Ask your infrastructure a question. Get an answer backed by live data.</h1>
     </div>
   </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="ai-promo" data-reveal style="grid-template-columns:1fr 1.2fr;">
-        <div>
-          <span class="eyebrow"><span class="dot"></span>How it works</span>
-          <h2>Evidence-grounded reasoning, <span class="italic gradient">not chat theater.</span></h2>
-          <ul style="list-style:none;padding:0;display:grid;gap:20px;margin-top:24px;">
-            <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;"><svg viewBox="0 0 16 16" width="28" height="28" style="padding:6px;color:var(--p-300);background:rgba(167,139,250,0.10);border:1px solid rgba(167,139,250,0.20);border-radius:8px;"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong style="display:block;color:var(--ink);">Evidence-linked answers</strong><span style="color:var(--ink-soft);font-size:14px;">Every claim is anchored to the metric, log line, or flow record it came from.</span></div></li>
-            <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;"><svg viewBox="0 0 16 16" width="28" height="28" style="padding:6px;color:var(--p-300);background:rgba(167,139,250,0.10);border:1px solid rgba(167,139,250,0.20);border-radius:8px;"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong style="display:block;color:var(--ink);">No silent actions</strong><span style="color:var(--ink-soft);font-size:14px;">The assistant proposes — your operators approve. Full audit trail of what was suggested vs applied.</span></div></li>
-            <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;"><svg viewBox="0 0 16 16" width="28" height="28" style="padding:6px;color:var(--p-300);background:rgba(167,139,250,0.10);border:1px solid rgba(167,139,250,0.20);border-radius:8px;"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong style="display:block;color:var(--ink);">Nutanix-aware reasoning</strong><span style="color:var(--ink-soft);font-size:14px;">Works against telemetry that already knows what a CVM is, where IPFIX terminates, what immutability means.</span></div></li>
-          </ul>
-        </div>
-        <div class="ai-promo__chat" style="padding:24px;">
-          <div class="msg msg--user"><span class="msg__who">You</span><p>Why is cluster-prod-03 latency drifting since 14:20?</p></div>
-          <div class="msg msg--ai"><span class="msg__who"><span class="msg__who-mark"></span>Overwatch</span><p>Top contributor: <strong>node-07 storage controller</strong>. CVM read latency moved from a 6.2 ms p95 baseline to 14.1 ms starting <span class="evidence">14:18:42</span>. Hardware view shows <strong>PSU 2 degraded</strong> at <span class="evidence">14:17:11</span> — same node, ~90 s earlier.</p>
-            <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="evidence">baseline-p95.metric</span>
-              <span class="evidence">redfish.psu.efficiency</span>
-              <span class="evidence">ipfix.east-west.flows</span>
-            </div>
-          </div>
-          <div class="msg msg--user"><span class="msg__who">You</span><p>Did the same PSU pattern hit any other node this quarter?</p></div>
-          <div class="msg msg--ai"><span class="msg__who"><span class="msg__who-mark"></span>Overwatch</span><p>Cross-referencing 14 nodes against the 90-day baseline<span class="dots"><span></span><span></span><span></span></span></p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer">
+<section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>AI INFRASTRUCTURE ASSISTANT</span><p class="section-sub">Overwatch includes a built-in AI analyst that connects to live metrics, logs, network flows, alerts, and cluster inventory. Ask a question in natural language and get an answer grounded in real infrastructure evidence — not generic suggestions from a chatbot that has never seen your environment.</p></header></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>THE PROBLEM</span><h2 class="section-title">Infrastructure teams are drowning in data but starved for answers</h2><p class="section-sub">You have dashboards for everything. But when something goes wrong, you still spend 45 minutes switching between Prism, Grafana, log viewers, and flow tables trying to piece together a story. The data exists. The understanding doesn't.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>The manual investigation loop</h3><p class="lead-snippet">“Why is VM prod-db-01 running slow?”</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Ask the AI assistant</h3><p class="lead-snippet">The assistant queries live data and responds:</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div><div class="prose" data-reveal><p class="lead-snippet">CPU usage spiked to 92% at 14:32 — correlated with a storage latency increase on the host.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>LIVE DATA ACCESS</span><h2 class="section-title">10 tools connected to your live infrastructure</h2><p class="section-sub">The AI assistant doesn't guess. It queries your actual data through 10 purpose-built MCP tools that read directly from your Overwatch telemetry stack.</p></header><div class="prose" data-reveal><p class="lead-snippet">Query current metric values for any host, VM, or cluster</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Pull time-series data across custom time windows</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Discover available metrics for any infrastructure target</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Search structured logs with label and text filtering</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Retrieve active and recent alerts with severity context</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Full cluster, host, VM, and storage inventory</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Access dashboard query definitions for deeper analysis</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Query IPFIX flow data with protocol and traffic filtering</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Retrieve network flow data for specific VMs</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Check IPs against VirusTotal threat intelligence</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>DAILY INSIGHTS</span><h2 class="section-title">Four automated insights delivered every morning</h2><p class="section-sub">Overwatch runs AI analysis on a daily schedule and surfaces findings across four infrastructure domains. The team starts every day knowing what changed, what's at risk, and what needs attention.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Network Health</h3><p class="lead-snippet">Traffic pattern changes, DNS anomalies, top-talker shifts, and flow-based service behavior from the last 24 hours.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Security Intelligence</h3><p class="lead-snippet">New external connections, IP reputation changes, unusual egress patterns, and threat intelligence correlation.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Hardware Health</h3><p class="lead-snippet">Redfish and IPMI sensor changes, temperature trends, fan anomalies, power events, and firmware state across all monitored hosts.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>LCM Compliance</h3><p class="lead-snippet">Lifecycle Manager update status, firmware compliance gaps, version drift, and recommended maintenance actions.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>VM QUICK REVIEW</span><h2 class="section-title">One-click AI analysis for any VM</h2><p class="section-sub">Select a VM, click Review. The AI assistant analyzes the last 24 hours of CPU, memory, storage, network, and flow data, then produces a structured report with findings, risk assessment, and recommendations.</p></header><div class="prose" data-reveal><p class="lead-snippet">prod-web-frontend-03</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Avg CPU</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Peak Memory</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">6.2 GB</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Disk IOPS</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Covers CPU, memory, disk, network, and flow behavior</li><li>Identifies anomalies, performance regressions, and resource pressure</li><li>Includes host context, IPMI hardware state, and HYCU protection status</li><li>Risk severity rating: Low, Medium, High, or Critical</li><li>Export to PDF or Excel for stakeholder sharing</li></ul></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>AI FOCUS MODE</span><h2 class="section-title">Ctrl+Click anything for instant AI analysis</h2><p class="section-sub">AI Focus mode lets operators click any dashboard widget, table row, or chart panel and get an immediate AI analysis of that specific data point in context. No prompt writing required.</p></header><div class="prose" data-reveal><p class="lead-snippet">Works on any dashboard widget, table row, or chart panel in Overwatch</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Contextual prompts are auto-generated from the widget query and time range</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Response includes metric analysis, anomaly detection, and suggested next steps</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>ARCHITECTURE</span><h2 class="section-title">How the AI assistant connects to your data</h2><p class="section-sub">Sign in with your own Claude account through OAuth. No API keys to manage or rotate.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>OAuth Login</h3><p class="lead-snippet">Overwatch pre-fetches an infrastructure snapshot — cluster state, alerts, inventory — so the assistant has immediate context.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Context Snapshot</h3><p class="lead-snippet">When deeper analysis is needed, the assistant calls MCP tools to query live metrics, logs, flows, and external threat intelligence.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>MCP Tool Queries</h3><p class="lead-snippet">Answers stream in real-time with markdown formatting, Mermaid diagrams, and source attribution showing which tools were used.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article><article class="feat-card" data-tilt><h3>Streaming Response</h3><p class="lead-snippet">No per-query charges.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>TRY IT YOURSELF</span><h2 class="section-title">See the AI assistant in your environment</h2><p class="section-sub">Deploy Overwatch on your Nutanix clusters. Connect your Claude account and start asking questions about your infrastructure within minutes of deployment.</p></header></div></section>  <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
           <a href="index.html" class="nav__brand" aria-label="Logic Insight home" style="padding:0;"><svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
   <defs>
     <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#C39BFF"/>
-      <stop offset="60%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+      <stop offset="0%" stop-color="#C39BFF"/><stop offset="60%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
     <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FAF7FF"/>
-      <stop offset="55%" stop-color="#D7C2FF"/>
-      <stop offset="100%" stop-color="#FF6B9C"/>
+      <stop offset="0%" stop-color="#FAF7FF"/><stop offset="55%" stop-color="#D7C2FF"/><stop offset="100%" stop-color="#FF6B9C"/>
     </linearGradient>
   </defs>
-  <!-- fingerprint mark -->
   <g transform="translate(0,2)">
     <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
     <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
@@ -135,7 +95,6 @@
     <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
     <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
   </g>
-  <!-- wordmark -->
   <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
   <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
 </svg></a>
@@ -150,36 +109,38 @@
         <nav class="footer__cols" aria-label="Footer">
           <div>
             <h4>Product</h4>
-            <a href="product.html">Cluster monitoring</a>
-            <a href="product.html#forecast">Predictive analytics</a>
-            <a href="product.html#flow">Network flow</a>
-            <a href="product.html#hycu">Backup posture</a>
-            <a href="architecture.html">Architecture</a>
-            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="cluster-monitoring.html">Cluster monitoring</a>
+            <a href="predictive-analytics.html">Predictive analytics</a>
+            <a href="network-flow-analysis.html">Network flow</a>
+            <a href="hycu-monitoring.html">HYCU monitoring</a>
+            <a href="redfish-monitoring.html">Redfish / IPMI</a>
+            <a href="snmp-monitoring.html">SNMP</a>
           </div>
           <div>
             <h4>Integrations</h4>
-            <a href="integrations.html#datadog">Datadog Marketplace</a>
-            <a href="integrations.html#grafana">Grafana · Prometheus</a>
-            <a href="integrations.html#hycu">HYCU Protégé</a>
-            <a href="integrations.html#prism">Prism Central</a>
-            <a href="integrations.html#wasabi">Wasabi · S3</a>
-            <a href="integrations.html#snmp">SNMP devices</a>
+            <a href="nutanix-datadog.html">Datadog</a>
+            <a href="nutanix-grafana.html">Grafana</a>
+            <a href="how-to-monitor-nutanix-with-datadog.html">How-to · Datadog</a>
+            <a href="how-to-monitor-nutanix-with-grafana.html">How-to · Grafana</a>
+            <a href="nutanix-monitoring-vs-prism.html">vs Prism</a>
+            <a href="integrations.html">All integrations</a>
           </div>
           <div>
             <h4>Company</h4>
-            <a href="about.html">About</a>
-            <a href="insights.html">Editorial</a>
+            <a href="features.html">Features</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="integrations.html">Integrations</a>
             <a href="pricing.html">Pricing</a>
-            <a href="about.html#contact">Contact</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
           </div>
           <div>
             <h4>Resources</h4>
-            <a href="#">Docs</a>
-            <a href="#">RSS feed</a>
-            <a href="#">GitHub</a>
-            <a href="#">Status</a>
-            <a href="#">Security</a>
+            <a href="resources.html">All resources</a>
+            <a href="blog.html">Blog</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
           </div>
         </nav>
       </div>

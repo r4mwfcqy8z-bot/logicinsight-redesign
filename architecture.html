@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Architecture · Logic Insight</title>
-  <meta name="description" content="Single Ubuntu 24.04 appliance. Open standards in, open standards out." />
+  <title>Overwatch Architecture | Logic Insight</title>
+  <meta name="description" content="Overwatch is architected as a self-contained on-prem operations platform. Nutanix is still the center of gravity, but the platform is designed to reduce console" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23C39BFF'/%3E%3Cstop offset='100%25' stop-color='%236D28D9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2307050E'/%3E%3Cpath d='M16 6 C 10 6 6 10 6 16 C 6 22 10 26 16 26' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 10 C 12 10 10 12 10 16 C 10 20 12 22 16 22' stroke='url(%23g)' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23C39BFF'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body data-page="architecture">
+<body>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-blob" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
@@ -22,17 +22,12 @@
       <svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
   <defs>
     <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#C39BFF"/>
-      <stop offset="60%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+      <stop offset="0%" stop-color="#C39BFF"/><stop offset="60%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
     <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FAF7FF"/>
-      <stop offset="55%" stop-color="#D7C2FF"/>
-      <stop offset="100%" stop-color="#FF6B9C"/>
+      <stop offset="0%" stop-color="#FAF7FF"/><stop offset="55%" stop-color="#D7C2FF"/><stop offset="100%" stop-color="#FF6B9C"/>
     </linearGradient>
   </defs>
-  <!-- fingerprint mark -->
   <g transform="translate(0,2)">
     <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
     <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
@@ -41,18 +36,17 @@
     <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
     <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
   </g>
-  <!-- wordmark -->
   <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
   <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
 </svg>
     </a>
     <nav class="nav__links" aria-label="Primary">
-    <a href="product.html">Product</a>
+    <a href="features.html">Features</a>
     <a href="architecture.html" class="is-active">Architecture</a>
     <a href="ai-assistant.html">AI Assistant</a>
     <a href="integrations.html">Integrations</a>
     <a href="pricing.html">Pricing</a>
-    <a href="insights.html">Insights</a>
+    <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
     </nav>
     <div class="nav__cta">
@@ -76,90 +70,23 @@
       </div>
     </div>
     <div class="container">
-      <div class="eyebrow" data-reveal><span class="dot"></span>Architecture</div>
-      <h1 data-reveal>One appliance. <span class="italic gradient">Open everywhere it matters.</span></h1>
-      <p data-reveal>Overwatch deploys as a single Ubuntu 24.04 LTS appliance inside your perimeter. Telemetry stays local; evidence flows out only when you choose where it goes.</p>
+      <div class="eyebrow" data-reveal><span class="dot"></span>Logic Insight</div>
+      <h1 data-reveal>One platform boundary for Nutanix and everything around it.</h1>
     </div>
   </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="arch__diagram" data-reveal>
-        <svg viewBox="0 0 1000 420" class="arch-svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <defs><filter id="glow"><feGaussianBlur stdDeviation="4"/></filter></defs>
-          <g class="arch-source"><rect x="40" y="40" width="200" height="50" rx="12"/><text x="140" y="70" text-anchor="middle">Nutanix Prism · API v3</text></g>
-          <g class="arch-source"><rect x="40" y="105" width="200" height="50" rx="12"/><text x="140" y="135" text-anchor="middle">Redfish · iDRAC · iLO</text></g>
-          <g class="arch-source"><rect x="40" y="170" width="200" height="50" rx="12"/><text x="140" y="200" text-anchor="middle">SNMP v2c / v3</text></g>
-          <g class="arch-source"><rect x="40" y="235" width="200" height="50" rx="12"/><text x="140" y="265" text-anchor="middle">IPFIX · NetFlow v9</text></g>
-          <g class="arch-source"><rect x="40" y="300" width="200" height="50" rx="12"/><text x="140" y="330" text-anchor="middle">HYCU · Backups</text></g>
-          <g class="arch-core">
-            <rect x="380" y="120" width="240" height="180" rx="20"/>
-            <text x="500" y="180" text-anchor="middle" class="arch-core-title">OVERWATCH</text>
-            <text x="500" y="205" text-anchor="middle" class="arch-core-sub">Ubuntu 24.04 · single appliance</text>
-            <g class="arch-core-pills">
-              <rect x="408" y="222" width="80" height="22" rx="11"/><text x="448" y="237" text-anchor="middle">ML baselines</text>
-              <rect x="500" y="222" width="84" height="22" rx="11"/><text x="542" y="237" text-anchor="middle">Anomalies</text>
-              <rect x="420" y="252" width="68" height="22" rx="11"/><text x="454" y="267" text-anchor="middle">Forecast</text>
-              <rect x="500" y="252" width="92" height="22" rx="11"/><text x="546" y="267" text-anchor="middle">AI assistant</text>
-            </g>
-          </g>
-          <g class="arch-dest"><rect x="760" y="60" width="200" height="60" rx="12"/><text x="860" y="95" text-anchor="middle">Datadog Marketplace</text></g>
-          <g class="arch-dest"><rect x="760" y="140" width="200" height="60" rx="12"/><text x="860" y="175" text-anchor="middle">Grafana · Prometheus</text></g>
-          <g class="arch-dest"><rect x="760" y="220" width="200" height="60" rx="12"/><text x="860" y="255" text-anchor="middle">S3 · Wasabi (immutable)</text></g>
-          <g class="arch-dest"><rect x="760" y="300" width="200" height="60" rx="12"/><text x="860" y="335" text-anchor="middle">On-box dashboards</text></g>
-          <g class="arch-lines">
-            <path d="M240,65 C310,65 320,210 380,210" stroke="rgba(167,139,250,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M240,130 C310,130 320,210 380,210" stroke="rgba(167,139,250,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M240,195 C310,195 320,210 380,210" stroke="rgba(167,139,250,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M240,260 C310,260 320,210 380,210" stroke="rgba(167,139,250,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M240,325 C310,325 320,210 380,210" stroke="rgba(167,139,250,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M620,210 C700,210 690,90 760,90" stroke="rgba(255,107,156,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M620,210 C700,210 690,170 760,170" stroke="rgba(255,107,156,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M620,210 C700,210 690,250 760,250" stroke="rgba(255,107,156,0.35)" stroke-width="1.4" fill="none"/>
-            <path d="M620,210 C700,210 690,330 760,330" stroke="rgba(255,107,156,0.35)" stroke-width="1.4" fill="none"/>
-          </g>
-          <g class="arch-pulses"></g>
-        </svg>
-      </div>
-
-      <div class="pillars" style="margin-top:48px;">
-        <div class="pillar" data-reveal>
-          <h3>On-prem by default</h3>
-          <p>Telemetry stays inside your perimeter. No data leaves unless you forward it.</p>
-        </div>
-        <div class="pillar" data-reveal>
-          <h3>Open standards</h3>
-          <p>Prometheus, OTLP, IPFIX, Redfish, SNMP. Standards in, standards out.</p>
-        </div>
-        <div class="pillar" data-reveal>
-          <h3>Forwarder, not lock-in</h3>
-          <p>Change destinations without rebuilding ingestion. Datadog today, Grafana tomorrow.</p>
-        </div>
-        <div class="pillar" data-reveal>
-          <h3>Ubuntu 24.04 LTS</h3>
-          <p>Single OVA / qcow2. Backed by a real LTS, not a custom kernel surprise.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer">
+<section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>PLATFORM ARCHITECTURE</span><h2 class="section-title">The product is opinionated because operations work is messy enough already.</h2><p class="section-sub">Overwatch is architected as a self-contained on-prem operations platform. Nutanix is still the center of gravity, but the platform is designed to reduce console sprawl around it by pulling hardware, network, backup, and flow context into the same operating surface.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>How Overwatch turns signals into one operational console</h3><p class="lead-snippet">Telemetry stays local unless you explicitly configure an output destination.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Internal services stay behind one controlled HTTPS entry point.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Prism Element and Prism Central collection</li><li>Redfish and IPMI hardware collection</li><li>SNMP polling and trap ingestion</li></ul></article><article class="feat-card" data-tilt><h3>Unified collection fabric</h3><p class="lead-snippet">Operators get one appliance to manage instead of a stack of sidecar tooling.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Prism Element &amp; Central, Redfish, IPMI, SNMP, HYCU, NetFlow</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>HYCU and IPFIX or NetFlow ingestion</li><li>VictoriaMetrics for metrics</li><li>VictoriaLogs for logs</li></ul></article><article class="feat-card" data-tilt><h3>Local operations graph</h3><p class="lead-snippet">Unified ingestion fabric normalizes all telemetry sources</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Baselines, anomaly detection, health scoring, forecasting</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Grafana for dashboards</li><li>React and API services behind one HTTPS front door</li><li>7x24 baseline modeling</li></ul></article><article class="feat-card" data-tilt><h3>Cross-domain analysis</h3><p class="lead-snippet">VictoriaMetrics &amp; VictoriaLogs with local-first retention</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Pre-built views, scheduled reports, optional forwarding</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Anomaly and health score generation</li><li>Forecasts, reports, and right-sizing signals</li><li>Cross-layer correlation across backups, network, and compute</li></ul></article><article class="feat-card" data-tilt><h3>Dashboards and forwarding</h3><p class="lead-snippet">Each stage in the appliance is designed to reduce handoffs: collect once, enrich locally, analyze with context, then decide what stays on-prem and what gets forwarded.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Prism Element, Prism Central, Redfish, IPMI, SNMP, HYCU, IPFIX, and NetFlow all enter through one appliance boundary instead of separate collectors and consoles.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>50+ pre-built dashboards</li><li>9 scheduled HTML report types</li><li>Selective external forwarding</li></ul></article><article class="feat-card" data-tilt><h3>Operating model</h3><p class="lead-snippet">Metrics, logs, dashboards, APIs, and reports live inside one local stack, so teams stop stitching context back together by hand.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Overwatch applies seasonal baselines, anomaly detection, health scoring, and forecasting across infrastructure domains, not just within one data source.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Open API for automation and downstream tooling</li><li>Single Ubuntu appliance footprint</li><li>Containerized internal services</li></ul></article></div><div class="prose" data-reveal><p class="lead-snippet">Operators can work from the local dashboards and reports on the appliance, then forward filtered data to Datadog, Grafana Cloud, or Coralogix if needed.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">The appliance is designed for on-prem data sovereignty first, with optional managed assistance around it if a team wants help operating the platform.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><p class="lead-snippet">Explore how one local platform can replace console sprawl without forcing your team into a new cloud control plane.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>FIVE STAGES INSIDE THE APPLIANCE</span><h2 class="section-title">The product is opinionated because operations work is messy enough already.</h2><p class="section-sub">Each stage in the appliance is designed to reduce handoffs: collect once, enrich locally, analyze with context, then decide what stays on-prem and what gets forwarded.</p></header><div class="feature-grid" data-reveal><article class="feat-card" data-tilt><h3>Unified collection fabric</h3><p class="lead-snippet">Prism Element, Prism Central, Redfish, IPMI, SNMP, HYCU, IPFIX, and NetFlow all enter through one appliance boundary instead of separate collectors and consoles.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Prism Element and Prism Central collection</li><li>Redfish and IPMI hardware collection</li><li>SNMP polling and trap ingestion</li><li>HYCU and IPFIX or NetFlow ingestion</li></ul></article><article class="feat-card" data-tilt><h3>Local operations graph</h3><p class="lead-snippet">Metrics, logs, dashboards, APIs, and reports live inside one local stack, so teams stop stitching context back together by hand.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>VictoriaMetrics for metrics</li><li>VictoriaLogs for logs</li><li>Grafana for dashboards</li><li>React and API services behind one HTTPS front door</li></ul></article><article class="feat-card" data-tilt><h3>Cross-domain analysis</h3><p class="lead-snippet">Overwatch applies seasonal baselines, anomaly detection, health scoring, and forecasting across infrastructure domains, not just within one data source.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>7x24 baseline modeling</li><li>Anomaly and health score generation</li><li>Forecasts, reports, and right-sizing signals</li><li>Cross-layer correlation across backups, network, and compute</li></ul></article><article class="feat-card" data-tilt><h3>Dashboards and forwarding</h3><p class="lead-snippet">Operators can work from the local dashboards and reports on the appliance, then forward filtered data to Datadog, Grafana Cloud, or Coralogix if needed.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>50+ pre-built dashboards</li><li>9 scheduled HTML report types</li><li>Selective external forwarding</li><li>Open API for automation and downstream tooling</li></ul></article><article class="feat-card" data-tilt><h3>Operating model</h3><p class="lead-snippet">The appliance is designed for on-prem data sovereignty first, with optional managed assistance around it if a team wants help operating the platform.</p><p class="copy-slot" data-paste-from-live>[ paste full paragraph from live page here ]</p><ul class="bullet-list"><li>Single Ubuntu appliance footprint</li><li>Containerized internal services</li><li>Local-first storage and retention</li><li>MaaS available without changing the product architecture</li></ul></article></div></div></section><section class="section ll-section"><div class="container"><header class="section-head" data-reveal><span class="eyebrow"><span class="dot"></span>SEE THE WORKFLOW IN YOUR OWN ENVIRONMENT</span><h2 class="section-title">See what your infrastructure looks like in one console.</h2><p class="section-sub">Explore how one local platform can replace console sprawl without forcing your team into a new cloud control plane.</p></header></div></section>  <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
           <a href="index.html" class="nav__brand" aria-label="Logic Insight home" style="padding:0;"><svg viewBox="0 0 220 36" class="nav__logo-svg" role="img" aria-label="Logic Insight">
   <defs>
     <linearGradient id="li-mark-g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#C39BFF"/>
-      <stop offset="60%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+      <stop offset="0%" stop-color="#C39BFF"/><stop offset="60%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
     <linearGradient id="li-insight-g" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FAF7FF"/>
-      <stop offset="55%" stop-color="#D7C2FF"/>
-      <stop offset="100%" stop-color="#FF6B9C"/>
+      <stop offset="0%" stop-color="#FAF7FF"/><stop offset="55%" stop-color="#D7C2FF"/><stop offset="100%" stop-color="#FF6B9C"/>
     </linearGradient>
   </defs>
-  <!-- fingerprint mark -->
   <g transform="translate(0,2)">
     <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#li-mark-g)" opacity="0.18"/>
     <rect x="0" y="0" width="32" height="32" rx="9" fill="none" stroke="url(#li-mark-g)" stroke-width="1.3" opacity="0.85"/>
@@ -168,7 +95,6 @@
     <path d="M16 13 C 13 13 12 14 12 16 C 12 18 13 19 16 19" stroke="#FAF7FF" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
     <circle cx="16" cy="16" r="1.4" fill="#FAF7FF"/>
   </g>
-  <!-- wordmark -->
   <text x="44" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="#FAF7FF">LOGIC</text>
   <text x="103" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="17" letter-spacing="0.04em" fill="url(#li-insight-g)">INSIGHT</text>
 </svg></a>
@@ -183,36 +109,38 @@
         <nav class="footer__cols" aria-label="Footer">
           <div>
             <h4>Product</h4>
-            <a href="product.html">Cluster monitoring</a>
-            <a href="product.html#forecast">Predictive analytics</a>
-            <a href="product.html#flow">Network flow</a>
-            <a href="product.html#hycu">Backup posture</a>
-            <a href="architecture.html">Architecture</a>
-            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="cluster-monitoring.html">Cluster monitoring</a>
+            <a href="predictive-analytics.html">Predictive analytics</a>
+            <a href="network-flow-analysis.html">Network flow</a>
+            <a href="hycu-monitoring.html">HYCU monitoring</a>
+            <a href="redfish-monitoring.html">Redfish / IPMI</a>
+            <a href="snmp-monitoring.html">SNMP</a>
           </div>
           <div>
             <h4>Integrations</h4>
-            <a href="integrations.html#datadog">Datadog Marketplace</a>
-            <a href="integrations.html#grafana">Grafana · Prometheus</a>
-            <a href="integrations.html#hycu">HYCU Protégé</a>
-            <a href="integrations.html#prism">Prism Central</a>
-            <a href="integrations.html#wasabi">Wasabi · S3</a>
-            <a href="integrations.html#snmp">SNMP devices</a>
+            <a href="nutanix-datadog.html">Datadog</a>
+            <a href="nutanix-grafana.html">Grafana</a>
+            <a href="how-to-monitor-nutanix-with-datadog.html">How-to · Datadog</a>
+            <a href="how-to-monitor-nutanix-with-grafana.html">How-to · Grafana</a>
+            <a href="nutanix-monitoring-vs-prism.html">vs Prism</a>
+            <a href="integrations.html">All integrations</a>
           </div>
           <div>
             <h4>Company</h4>
-            <a href="about.html">About</a>
-            <a href="insights.html">Editorial</a>
+            <a href="features.html">Features</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="integrations.html">Integrations</a>
             <a href="pricing.html">Pricing</a>
-            <a href="about.html#contact">Contact</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
           </div>
           <div>
             <h4>Resources</h4>
-            <a href="#">Docs</a>
-            <a href="#">RSS feed</a>
-            <a href="#">GitHub</a>
-            <a href="#">Status</a>
-            <a href="#">Security</a>
+            <a href="resources.html">All resources</a>
+            <a href="blog.html">Blog</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="ai-assistant.html">AI Assistant</a>
           </div>
         </nav>
       </div>
