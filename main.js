@@ -241,7 +241,9 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     { group: "Action",      label: "Contact sales",            href: "about.html#contact",   icon: "✉️" },
   ];
 
-  if (!kbd || !openBtn) return;
+  if (!kbd || !openBtn) {
+    /* command palette markup not on this page */
+  } else {
 
   const render = (q = "") => {
     const Q = q.trim().toLowerCase();
@@ -296,4 +298,5 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     }
   });
   input.addEventListener("input", () => render(input.value));
+  } // close else
 }
