@@ -235,10 +235,12 @@ body::before {
   background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 4px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  .nav__cta .kbd-trigger { display: none; }
+}
+@media (max-width: 880px) {
   .nav__links { display: none; }
   .nav { grid-template-columns: 1fr auto; }
-  .nav__cta .kbd-trigger { display: none; }
 }
 @media (max-width: 640px) {
   .nav__cta .btn--ghost { display: none; }
